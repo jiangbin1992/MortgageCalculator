@@ -63,7 +63,7 @@
 
 
     <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="ads_native">/6499/example/native</string>
-    <string name="interstail">/6499/example/interstitial</string>
-    <string name="banner">sw</string>
+<!--    <string name="ads_native">/6499/example/native</string>-->
+<!--    <string name="interstail">/6499/example/interstitial</string>-->
+<!--    <string name="banner">sw</string>-->
 </resources>

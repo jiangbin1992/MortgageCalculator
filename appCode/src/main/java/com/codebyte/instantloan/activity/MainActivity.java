@@ -1,5 +1,8 @@
 package com.codebyte.instantloan.activity;
 
+import static com.best.now.myad.utils.Constant.URL_PRIVACY_POLICY;
+import static com.best.now.myad.utils.PublicHelperKt.loadAd;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
 
+import com.best.now.myad.WebActivity;
 import com.codebyte.instantloan.R;
 import com.codebyte.instantloan.adutills.AdMobLoaderClass;
 import com.codebyte.instantloan.adutills.AdUtils;
@@ -42,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         this.btnEpfOnline = (ImageView) findViewById(R.id.btn_epf_online);
         this.btnPrivacyPolicy = (LinearLayout) findViewById(R.id.btn_Privacy_policy);
         this.btnShareApp = (LinearLayout) findViewById(R.id.btn_Share_App);
+        LinearLayout advBanner =(LinearLayout)findViewById(R.id.advBanner);
+        loadAd(advBanner);
         this.btnLoanGuide.setOnClickListener(new View.OnClickListener() {
 
 
@@ -88,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
 
             public final void onClick(View view) {
-                MainActivity.this.Cliam6(view);
+               // MainActivity.this.Cliam6(view);
+                WebActivity.Companion.startActivity(MainActivity.this, "Privacy Policy", URL_PRIVACY_POLICY);
             }
         });
         this.btnShareApp.setOnClickListener(new View.OnClickListener() {

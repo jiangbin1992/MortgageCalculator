@@ -1,5 +1,7 @@
 package com.codebyte.instantloan.adutills;
 
+import static com.best.now.myad.utils.Constant.AD_INTERSTITIAL_ID;
+
 import android.app.Activity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,7 +38,7 @@ public class AdUtils {
     public static void googleBanner(final Activity activity, final FrameLayout frameLayout, final String str, final Boolean bool) {
         AdView adView = new AdView(activity);
         adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId(activity.getString(R.string.banner));
+        adView.setAdUnitId(AD_INTERSTITIAL_ID);
         frameLayout.addView(adView);
         AdRequest build = new AdRequest.Builder().build();
         if (adView.getAdSize() == null && adView.getAdUnitId() == null) {
@@ -75,10 +77,11 @@ public class AdUtils {
 
     public static void nativeAd(Activity activity, FrameLayout frameLayout, Boolean bool, Boolean bool2) {
         googleNative(activity, frameLayout, bool, bool2);
+
     }
 
     public static void googleNative(final Activity activity, final FrameLayout frameLayout, final Boolean bool, final Boolean bool2) {
-        AdLoader.Builder builder = new AdLoader.Builder(activity, activity.getString(R.string.ads_native));
+        AdLoader.Builder builder = new AdLoader.Builder(activity, AD_INTERSTITIAL_ID);
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
 
 
