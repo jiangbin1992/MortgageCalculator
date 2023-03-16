@@ -31,7 +31,7 @@ public class AdUtils {
 
 
     public static void bannerAd(Activity activity, FrameLayout frameLayout, String str, Boolean bool) {
-        googleBanner(activity, frameLayout, str, bool);
+//        googleBanner(activity, frameLayout, str, bool);
     }
 
 
@@ -76,7 +76,7 @@ public class AdUtils {
 
 
     public static void nativeAd(Activity activity, FrameLayout frameLayout, Boolean bool, Boolean bool2) {
-        googleNative(activity, frameLayout, bool, bool2);
+//        googleNative(activity, frameLayout, bool, bool2);
 
     }
 
